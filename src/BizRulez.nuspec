@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BizRulez</id>
+    <version>$version$</version>
+    <title>BizRulez</title>
+    <authors>Oliver Sturm</authors>
+    <owners>Oliver Sturm</owners>
+    <licenseUrl>https://github.com/oliversturm/BizRulez/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/oliversturm/BizRulez</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Business Rules Library</description>
+    <summary>Business Rules Library</summary>
+    <copyright>Copyright Oliver Sturm 2004-2018</copyright>
+    <tags>Business Rules</tags>
+  </metadata>
+</package>
