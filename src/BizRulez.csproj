@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{034ED23C-4209-47F2-BD3A-BB67A466CC1E}</ProjectGuid>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>pct.BizRulez</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>pct.BizRulez</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CheckOptions.cs" />
+    <Compile Include="Extraction\DateTime.cs" />
+    <Compile Include="Helpers\OrderedDictionaryValidationProxy.cs" />
+    <Compile Include="ICheckable.cs" />
+    <Compile Include="BizRulezChecker.cs" />
+    <Compile Include="Results\FailureReason.cs" />
+    <Compile Include="Results\Result.cs" />
+    <Compile Include="Results\ResultDetail.cs" />
+    <Compile Include="Results\ResultsExtensions.cs" />
+    <Compile Include="Results\ResultsException.cs" />
+    <Compile Include="Results\ResultStatus.cs" />
+    <Compile Include="RuleChecking\CollectionContainsRuleChecker.cs" />
+    <Compile Include="RuleChecking\ComparisonRuleChecker.cs" />
+    <Compile Include="RuleChecking\FormatRuleChecker.cs" />
+    <Compile Include="RuleChecking\InvalidRuleCheckerException.cs" />
+    <Compile Include="RuleChecking\NonEmptyStringRuleChecker.cs" />
+    <Compile Include="RuleChecking\NotNullRuleChecker.cs" />
+    <Compile Include="RuleChecking\RuleChecker.cs" />
+    <Compile Include="RuleChecking\RuleCheckersExtensions.cs" />
+    <Compile Include="RuleChecking\UniquenessRuleChecker.cs" />
+    <Compile Include="Rules\InvalidRuleException.cs" />
+    <Compile Include="Rules\Parameters\InvalidParameterTypeException.cs" />
+    <Compile Include="Rules\Parameters\RuleBoolParameter.cs" />
+    <Compile Include="Rules\Parameters\RuleComparisonOperatorParameter.cs" />
+    <Compile Include="Rules\Parameters\RuleDateTimeParameter.cs" />
+    <Compile Include="Rules\Parameters\RuleDecimalParameter.cs" />
+    <Compile Include="Rules\Parameters\RuleDoubleParameter.cs" />
+    <Compile Include="Rules\Parameters\RuleIntParameter.cs" />
+    <Compile Include="Rules\Parameters\RuleInvariantDateTimeParameter.cs" />
+    <Compile Include="Rules\Parameters\RuleParameter.cs" />
+    <Compile Include="Rules\Parameters\RuleParameterSet.cs" />
+    <Compile Include="Rules\Parameters\RuleStringParameter.cs" />
+    <Compile Include="Rules\Rule.cs" />
+    <Compile Include="Rules\RulesExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
